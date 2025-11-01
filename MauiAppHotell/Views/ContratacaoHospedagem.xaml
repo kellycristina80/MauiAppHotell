@@ -85,8 +85,11 @@
                     </Frame>
                     <Button Text="Avançar" 
                       FontFamily="BorelRegular" 
-                            FontSize="20"/>
-                    
+                     Padding="10"       FontSize="20"/>
+                     Padding="10"
+                    <Button Text="SOBRE" 
+  FontFamily="BorelRegular" 
+        FontSize="10"/>
 
                 </VerticalStackLayout>
             </Frame>

@@ -46,7 +46,7 @@ namespace MauiAppHotell.Views
             dtpck_checkout.MinimumDate = data_selecionada_checkin.AddDays(1);
             dtpck_checkout.MaximumDate = data_selecionada_checkin.AddSeconds(6);
             
-            // Lógica para tratar a seleção de data do check-in, se necessário
+            
         }
     }
 }

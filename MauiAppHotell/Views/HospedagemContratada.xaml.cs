@@ -4,19 +4,12 @@ namespace MauiAppHotell.Views;
 
 public partial class HospedagemContratada : ContentPage
 {
+    
 
-    public HospedagemContratada (Quartos reserva)
+    public HospedagemContratada()
     {
         InitializeComponent();
-        double total = reserva.ValorDiariaAdulto +
-                      reserva.ValorDiariaCrianca;
-
-        labelResumo.Text = $"""
-            Quarto: {reserva.Descricao}
-            Valor da diária adulto: R$ {reserva.ValorDiariaAdulto}
-            Valor da diária criança: R$ {reserva.ValorDiariaCrianca}
-            Valor total: R$ {total}
-            """;
+       
     }
 
     private void Button_Clicked(object sender, EventArgs e)

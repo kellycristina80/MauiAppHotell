@@ -17,75 +17,83 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>
         </Grid>
-        <Grid Grid.Row="1">
-            <Frame Padding="10">
-                <VerticalStackLayout>
-                    <Grid RowDefinitions="Auto, Auto"
-                       ColumnDefinitions="*, *, 2*">
-                        <Label Grid.Row="0" Grid.Column="0"
-                               Text="Adultos:" />
-                        <Label Grid.Row="0" Grid.Column="1"
-                               TextColor="{StaticResource Primary}" 
-                               Text="{Binding Value}"
-                               BindingContext="{x:Reference stp_adultos}"/>
+        <Frame Padding="10">
+            <VerticalStackLayout>
+                <Grid RowDefinitions="Auto, Auto"
+                      ColumnDefinitions="*, *, 2*">
 
-                        <Stepper Grid.Row="0" Grid.Column="2"
-                                 x:Name="stp_adultos"
-                                 Minimum="0"
-                                 Maximum="10"
-                                 Increment="1" />
+                    <Label Grid.Row="0" Grid.Column="0"
+                           Text="Adultos: " />
 
-                        <Label Grid.Row="1" Grid.Column="0"
-                               Text="Crianças:" />
-                        <Label Grid.Row="1" Grid.Column="1"
-                         TextColor="{StaticResource Primary}" 
-                            Text="{Binding Value}"
-                     BindingContext="{x:Reference stp_criancas}"/>
+                    <Label Grid.Row="0" Grid.Column="1"
+                           TextColor="Aqua"
+                           Text="{Binding Value}"
+                           BindingContext="{x:Reference stp_adultos}"/>
 
-                        <Stepper Grid.Row="1" Grid.Column="2"
-                         x:Name="stp_criancas"
-                        Minimum="0"
-                        Maximum="10"
-                         Increment="1" />
-                    </Grid>
+                    <Stepper Grid.Row="0" Grid.Column="2"
+                             x:Name="stp_adultos"
+                             Minimum="0"
+                             Maximum="10"
+                             Increment="1" />
 
-                    <Label Text="Escolha sua suíte"/>
+                    <Label Grid.Row="1" Grid.Column="0"
+                           Text="Crianças:" />
 
-                    <Picker x:Name= "pck_quarto"
-                            Title="Selecione sua acomodação"
-                            ItemDisplayBinding="{Binding Descricao}"
-                    
-                    FontAttributes="Bold"/>
+                    <Label Grid.Row="1" Grid.Column="1"
+                           TextColor="Aqua"
+                           Text="{Binding Value}"
+                           BindingContext="{x:Reference stp_criancas}"/>
 
-                    <Frame Padding="20"
-                    Margin="20">
-                        <VerticalStackLayout>
-                            <Label Text="Período da Estadia: "
-                                   FontAttributes="Bold"/>
-                            <HorizontalStackLayout>
-                                <Label Text="Check-in: "/>
-                                <DatePicker x:Name="dtpck_checkin"
+                    <Stepper Grid.Row="1" Grid.Column="2"
+                             x:Name="stp_criancas"
+                             Minimum="0"
+                             Maximum="10"
+                             Increment="1" />
+                </Grid>
+
+                <Frame Padding="10" Margin="10">
+                    <Label Text="Esculha sua Suíte" 
+                           TextTransform="Uppercase"
+                           FontSize="Subtitle"
+                           TextColor="Aqua" />
+
+                    <Picker x:Name="pck_quarto"
+                            Title="Selecione sua Acomodação" 
+                            ItemDisplayBinding="{Binding Descricao}" />
+                </Frame>
+
+                <Frame Padding="10"
+                       Margin="10">
+                    <VerticalStackLayout Spacing="10">
+
+                        <Label Text="Período de Estadia"
+                               TextTransform="Uppercase"
+                               FontSize="Subtitle"
+                               TextColor="Aqua"/>
+
+                            <Grid ColumnDefinitions="Auto,Auto" HorizontalOptions="Center">
+                                <Label Grid.Column="0" Text="Check-in: " />
+                                <DatePicker Grid.Column="1" x:Name="dtpck_checkin"
                                             DateSelected="dtpck_checkin_DateSelected"
                                             Format="dd/MM/yyyy" />
-                            </HorizontalStackLayout>
+                            </Grid>
 
-                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
-                            <Label Text="Check-out: " />
-                                <DatePicker x:Name="dtpck_checkout"
+                            <Grid ColumnDefinitions="Auto,Auto" HorizontalOptions="Center">
+                                <Label Grid.Column="0" Text="Check-out: " />
+                                <DatePicker Grid.Column="1" x:Name="dtpck_checkout"
                                             Format="dd/MM/yyyy" />
-                            </HorizontalStackLayout>
-                        </VerticalStackLayout>
-                    </Frame>
-                    <Button Text="Avançar" Clicked="Button_Clicked"
-                            FontFamily="BorelRegular" 
-                            FontSize="20"/>
-                    
-                    <Button Text="SOBRE" Clicked="Sobre_Clicked"
-                            Margin="10"
-                            FontFamily="BorelRegular" 
-                            FontSize="10"/>
-                </VerticalStackLayout>
-            </Frame>
-        </Grid>
+                            </Grid>
+                    </VerticalStackLayout>
+                </Frame>
+                <Button Text="Avançar" Clicked="Button_Clicked"
+                        FontFamily="BorelRegular" 
+                        FontSize="20"/>
+                
+                <Button Text="SOBRE" Clicked="Sobre_Clicked"
+                        Margin="10"
+                        FontFamily="BorelRegular" 
+                        FontSize="10"/>
+            </VerticalStackLayout>
+        </Frame>
     </Grid>
 </ContentPage>

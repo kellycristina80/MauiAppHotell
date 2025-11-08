@@ -1,9 +1,18 @@
-namespace MauiAppHotell.Views;
+using Microsoft.Maui.Controls;
 
-public partial class SobreDesenvolvimento : ContentPage
+namespace MauiAppHotell.Views
 {
-	public SobreDesenvolvimento()
-	{
-		InitializeComponent();
-	}
+    public partial class SobreDesenvolvimento : ContentPage
+    {
+        public SobreDesenvolvimento()
+        {
+            InitializeComponent();
+        }
+
+        private void Sair_Clicked(object sender, EventArgs e)
+        {
+            // Exemplo: Fechar a página ou navegar para outra
+            Navigation.PopAsync();
+        }
+    }
 }

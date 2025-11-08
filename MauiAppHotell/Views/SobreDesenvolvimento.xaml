@@ -13,7 +13,8 @@
                     Text="Desenvolvido por Kelly Rodrigues"
                     VerticalOptions="Center" 
                     HorizontalOptions="Center"
-                    Margin="10"/>     
+                    FontFamily="Borel-Regular"
+                    Margin="1"/>     
             </HorizontalStackLayout>
             <Grid>
                 <Label Text="Novembro de 2025"
@@ -21,6 +22,21 @@
                        HorizontalOptions="Center"
                        FontAttributes="Bold"/>
             </Grid>
+            <Frame>
+                <VerticalStackLayout>
+                    <Label Text="Este aplicativo está em desenvolvimento e seu objetivo é proporcionar uma experiência de usuário intuitiva e funcional para a gestão de hospedagens." 
+                           TextColor="{StaticResource Primary}"
+                           FontFamily="Borel-Regular"
+                           FontSize="16"
+                           Margin="5"
+                           HorizontalTextAlignment="Center"
+                           />
+                    <Button Text="Sair"
+                            HorizontalOptions="Center"
+                            Clicked="Sair_Clicked"
+                            />
+                </VerticalStackLayout>
+            </Frame>
         </VerticalStackLayout>
     </Frame>
 </ContentPage>

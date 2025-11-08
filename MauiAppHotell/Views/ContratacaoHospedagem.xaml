@@ -68,8 +68,9 @@
                                             DateSelected="dtpck_checkin_DateSelected"
                                             Format="dd/MM/yyyy" />
                             </HorizontalStackLayout>
-                            <HorizontalStackLayout>
-                                <Label Text="Check-out: "/>
+
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Check-out: " />
                                 <DatePicker x:Name="dtpck_checkout"
                                             Format="dd/MM/yyyy" />
                             </HorizontalStackLayout>

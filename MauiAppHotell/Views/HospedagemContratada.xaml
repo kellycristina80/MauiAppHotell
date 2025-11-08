@@ -9,12 +9,10 @@
     <VerticalStackLayout VerticalOptions="CenterAndExpand">
 
         <Label x:Name="{Binding Quartos.Descricao}" 
-
         TextColor="{StaticResource Primary}" 
                FontFamily="Borel-Regular"
                FontSize="20"
                HorizontalOptions="Center"
- 
                />
         <Frame Margin="10">
             <HorizontalStackLayout>
@@ -43,7 +41,6 @@
                 <Label Grid.Row="1" Grid.Column="2" Text="3"/>
 
             </Grid>
-            
         </Frame>
         <Frame>
             <HorizontalStackLayout>
@@ -56,7 +53,5 @@
         <Button Text="Voltar"
                 HorizontalOptions="Center"
                 Clicked="Button_Clicked" />
-        
-        
     </VerticalStackLayout>
 </ContentPage>

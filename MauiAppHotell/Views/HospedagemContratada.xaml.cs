@@ -4,7 +4,6 @@ namespace MauiAppHotell.Views;
 
 public partial class HospedagemContratada : ContentPage
 {
-    private object labelResumo;
 
     public HospedagemContratada (Quartos reserva)
     {

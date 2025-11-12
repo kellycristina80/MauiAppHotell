@@ -8,8 +8,8 @@
     <VerticalStackLayout VerticalOptions="CenterAndExpand">
 
         <Label Text="{Binding QuartoSelecionado.Descricao}"
-               TextColor="Aqua"
-               FontFamily="Kalam"
+               TextColor="{StaticResource Primary}"
+               FontFamily="borel-regular"
                FontSize="50"
                HorizontalTextAlignment="Center"/>
 
@@ -17,7 +17,7 @@
             <Grid ColumnDefinitions="Auto,Auto"
                   HorizontalOptions="Center">
                 <Label Grid.Column="0" Text="Adultos: " />
-                <Label Grid.Column="1" Text="{Binding QntAdultos}" TextColor="Aqua" />
+                <Label Grid.Column="1" Text="{Binding QntAdultos}" TextColor="{StaticResource Primary}" />
             </Grid>
         </Frame>
 
@@ -25,7 +25,7 @@
             <Grid ColumnDefinitions="Auto,Auto"
                   HorizontalOptions="Center">
                 <Label Grid.Column="0" Text="Crianças: " />
-                <Label Grid.Column="1" Text="{Binding QntCriancas}" TextColor="Aqua" />
+                <Label Grid.Column="1" Text="{Binding QntCriancas}" TextColor="{StaticResource Primary}" />
             </Grid>
         </Frame>
 
@@ -38,15 +38,15 @@
 
                 <Label Grid.Row="1" Grid.Column="0" 
                        Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}"
-                       TextColor="Aqua" />
+                       TextColor="{StaticResource Primary}" />
 
                 <Label Grid.Row="1" Grid.Column="1" 
                        Text="{Binding DataCheckOut, StringFormat='{}{0:dd/MM/yyyy}'}" 
-                       TextColor="Aqua" />
+                       TextColor="{StaticResource Primary}" />
 
                 <Label Grid.Row="1" Grid.Column="2" 
                        Text="{Binding Estadia}"
-                       TextColor="Aqua" />
+                       TextColor="{StaticResource Primary}" />
             </Grid>
         </Frame>
 
@@ -54,13 +54,12 @@
             <Grid ColumnDefinitions="Auto,Auto"
                   HorizontalOptions="Center">
                 <Label Grid.Column="0" Text="Valor Total: " />
-                <Label Grid.Column="1" Text="{Binding ValorTotal, StringFormat='{}{0:c}'}" TextColor="Aqua" />
+                <Label Grid.Column="1" Text="{Binding ValorTotal, StringFormat='{}{0:c}'}" TextColor="{StaticResource Primary}" />
             </Grid>
         </Frame>
 
         <Button Text="Voltar"
                     HorizontalOptions="Center"
                     Clicked="Button_Clicked" />
-        </VerticalStackLayout>
-    </Grid>
+    </VerticalStackLayout>
 </ContentPage>

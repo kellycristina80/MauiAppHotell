@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MauiAppHoteljc.Models
+namespace MauiAppHotell.Models
 {
     public class Hospedagem
     {
@@ -21,7 +21,7 @@ namespace MauiAppHoteljc.Models
         {
             get
             {
-                double valor_adultos = QntAdultos * QuartoSelecionado.ValorDiariAdulto;
+                double valor_adultos = QntAdultos * QuartoSelecionado.ValorDiariaAdulto;
                 double valor_criancas = QntCriancas * QuartoSelecionado.ValorDiariaCrianca;
 
                 double total = (valor_adultos + valor_criancas) * Estadia;

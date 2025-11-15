@@ -10,9 +10,15 @@ namespace MauiAppHotell.Models
         public int NumeroParticipantes { get; set; }
         public string Local { get; set; }
         public decimal CustoPorParticipante { get; set; }
+        // Duração como TimeSpan
+        public TimeSpan Duracao => DataTermino - DataInicio;
 
-        public int DuracaoEmDias => (DataTermino - DataInicio).Days + 1;
+        // Duração em dias (com +1 para incluir o dia final)
+        public int DuracaoEmDias => Duracao.Days + 1;
 
+        // Custo total
         public decimal CustoTotal => NumeroParticipantes * CustoPorParticipante;
+
     }
 }
+

@@ -94,7 +94,11 @@
                         Margin="5"
                         FontFamily="BorelRegular" 
                         FontSize="10"/>
-                
+                <Button Text="Cadastrar Evento"
+        Clicked="CadastroEvento_Clicked"
+        Margin="5"
+        FontSize="10"/>
+
 
             </VerticalStackLayout>
         </Frame>

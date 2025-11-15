@@ -59,7 +59,11 @@ namespace MauiAppHotell.Views
 
 
         }
-        
+        private async void CadastroEvento_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CadastroEventoPage());
+        }
+
 
     }
 }

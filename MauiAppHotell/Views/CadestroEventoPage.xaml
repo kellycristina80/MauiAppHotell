@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotell.Views.CadastroEventoPage"
+             Title="Cadastro de Evento">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+            <Label Text="Nome do Evento" FontAttributes="Bold" />
+            <Entry Placeholder="Digite o nome" Text="{Binding Nome}" />
+
+            <Label Text="Data de Início" FontAttributes="Bold" />
+            <DatePicker Date="{Binding DataInicio}" />
+
+            <Label Text="Data de Término" FontAttributes="Bold" />
+            <DatePicker Date="{Binding DataTermino}" />
+
+            <Label Text="Número de Participantes" FontAttributes="Bold" />
+            <Entry Placeholder="Digite o número" Text="{Binding NumeroParticipantes}" Keyboard="Numeric" />
+
+            <Label Text="Local do Evento" FontAttributes="Bold" />
+            <Entry Placeholder="Digite o local" Text="{Binding Local}" />
+
+            <Label Text="Custo por Participante (R$)" FontAttributes="Bold" />
+            <Entry Placeholder="Digite o valor" Text="{Binding CustoPorParticipante}" Keyboard="Numeric" />
+
+            <Label Text="{Binding Duracao, StringFormat='Duração: {0:%d} dias, {0:%h} horas, {0:%m} minutos'}"
+       FontAttributes="Bold"
+       TextColor="DarkGreen" />
+            <Button Text="Ver Resumo do Evento"
+        Clicked="OnVerResumoClicked"
+        BackgroundColor="LightBlue"
+        FontAttributes="Bold" />
+
+            <Button Text="Salvar Evento" Clicked="OnSalvarEventoClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+

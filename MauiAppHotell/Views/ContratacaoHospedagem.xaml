@@ -88,12 +88,14 @@
                 </Frame>
                 <Button Text="Avançar" Clicked="Button_Clicked"
                         FontFamily="BorelRegular" 
-                        FontSize="20"/>
+                        FontSize="10"/>
                 
                 <Button Text="SOBRE" Clicked="Sobre_Clicked"
-                        Margin="10"
+                        Margin="5"
                         FontFamily="BorelRegular" 
                         FontSize="10"/>
+                
+
             </VerticalStackLayout>
         </Frame>
     </Grid>
